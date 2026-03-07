@@ -1,0 +1,73 @@
+{
+    "id": "pack.luxury_fashion",
+    "name": {
+        "en": "Luxury Fashion",
+        "ru": "Люксовая мода",
+        "uk": "Люксова мода"
+    },
+    "description": {
+        "en": "High-end studio fashion, sharp focus, perfect skin.",
+        "ru": "Студийная фэшн фотография, идеальная резкость и кожа.",
+        "uk": "Студійна фешн фотографія, ідеальна різкість та шкіра."
+    },
+    "cover": "/packs/luxury_fashion.jpg",
+    "defaults": {
+        "style.base": [
+            "style.photoreal"
+        ],
+        "quality.detail": [
+            "q.skin",
+            "q.8k"
+        ],
+        "camera.lens": [
+            "lens.85mm"
+        ],
+        "camera.dof": [
+            "dof.shallow"
+        ],
+        "scene.location": [
+            "loc.0"
+        ],
+        "clothing.outfit": [
+            "outfit.0"
+        ]
+    },
+    "pools": {
+        "lighting.setup": [
+            "light.0",
+            "light.1"
+        ],
+        "camera.lens": [
+            "lens.85mm",
+            "lens.135mm"
+        ],
+        "subject.gender": [
+            "gender.male",
+            "gender.female"
+        ],
+        "appearance.glasses": [
+            "glasses.sun"
+        ],
+        "clothing.outfit": [
+            "outfit.0",
+            "outfit.4"
+        ]
+    },
+    "generator": {
+        "picks": {
+            "lighting.setup": {
+                "min": 1,
+                "max": 2
+            },
+            "quality.detail": {
+                "min": 2,
+                "max": 3
+            }
+        },
+        "seedStrategy": "stable"
+    },
+    "rules": {
+        "forbidCombos": [],
+        "require": []
+    }
+}

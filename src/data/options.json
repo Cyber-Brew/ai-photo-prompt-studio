@@ -1,0 +1,943 @@
+{
+  "version": "1.0.2",
+  "categories": {
+    "subject.gender": {
+      "type": "single",
+      "options": [
+        {
+          "key": "gender.male",
+          "prompt": "man",
+          "weight": 50
+        },
+        {
+          "key": "gender.female",
+          "prompt": "woman",
+          "weight": 50
+        }
+      ]
+    },
+    "appearance.hair": {
+      "type": "single",
+      "options": [
+        {
+          "key": "hair.0",
+          "prompt": "short messy hair",
+          "weight": 50
+        },
+        {
+          "key": "hair.1",
+          "prompt": "long wavy hair",
+          "weight": 50
+        },
+        {
+          "key": "hair.2",
+          "prompt": "buzz cut",
+          "weight": 50
+        },
+        {
+          "key": "hair.3",
+          "prompt": "slicked back hair",
+          "weight": 50
+        },
+        {
+          "key": "hair.4",
+          "prompt": "bob cut",
+          "weight": 50
+        },
+        {
+          "key": "hair.5",
+          "prompt": "pixie cut",
+          "weight": 50
+        },
+        {
+          "key": "hair.6",
+          "prompt": "curly voluminous hair",
+          "weight": 50
+        },
+        {
+          "key": "hair.7",
+          "prompt": "straight long hair",
+          "weight": 50
+        },
+        {
+          "key": "hair.8",
+          "prompt": "ponytail",
+          "weight": 50
+        },
+        {
+          "key": "hair.9",
+          "prompt": "messy bun",
+          "weight": 50
+        },
+        {
+          "key": "hair.10",
+          "prompt": "braided hair",
+          "weight": 50
+        },
+        {
+          "key": "hair.11",
+          "prompt": "dreadlocks",
+          "weight": 50
+        },
+        {
+          "key": "hair.12",
+          "prompt": "afro",
+          "weight": 50
+        },
+        {
+          "key": "hair.13",
+          "prompt": "bald",
+          "weight": 50
+        },
+        {
+          "key": "hair.14",
+          "prompt": "undercut",
+          "weight": 50
+        },
+        {
+          "key": "hair.15",
+          "prompt": "mullet",
+          "weight": 50
+        },
+        {
+          "key": "hair.16",
+          "prompt": "faux hawk",
+          "weight": 50
+        },
+        {
+          "key": "hair.17",
+          "prompt": "curtain bangs",
+          "weight": 50
+        },
+        {
+          "key": "hair.18",
+          "prompt": "side-swept bangs",
+          "weight": 50
+        },
+        {
+          "key": "hair.19",
+          "prompt": "wavy bob",
+          "weight": 50
+        },
+        {
+          "key": "hair.20",
+          "prompt": "tousled hair",
+          "weight": 50
+        }
+      ]
+    },
+    "appearance.glasses": {
+      "type": "single",
+      "options": [
+        {
+          "key": "glasses.none",
+          "prompt": "",
+          "weight": 50
+        },
+        {
+          "key": "glasses.sun",
+          "prompt": "wearing sunglasses",
+          "weight": 50
+        },
+        {
+          "key": "glasses.clear",
+          "prompt": "wearing clear glasses",
+          "weight": 50
+        }
+      ]
+    },
+    "clothing.outfit": {
+      "type": "single",
+      "options": [
+        {
+          "key": "outfit.0",
+          "prompt": "black suit",
+          "weight": 50
+        },
+        {
+          "key": "outfit.1",
+          "prompt": "streetwear",
+          "weight": 50
+        },
+        {
+          "key": "outfit.2",
+          "prompt": "leather jacket",
+          "weight": 50
+        },
+        {
+          "key": "outfit.3",
+          "prompt": "white t-shirt and jeans",
+          "weight": 50
+        },
+        {
+          "key": "outfit.4",
+          "prompt": "formal gown",
+          "weight": 50
+        },
+        {
+          "key": "outfit.5",
+          "prompt": "tactical gear",
+          "weight": 50
+        },
+        {
+          "key": "outfit.6",
+          "prompt": "cyberpunk outfit",
+          "weight": 50
+        },
+        {
+          "key": "outfit.7",
+          "prompt": "vintage dress",
+          "weight": 50
+        },
+        {
+          "key": "outfit.8",
+          "prompt": "athleisure",
+          "weight": 50
+        },
+        {
+          "key": "outfit.9",
+          "prompt": "business casual",
+          "weight": 50
+        },
+        {
+          "key": "outfit.10",
+          "prompt": "winter coat and scarf",
+          "weight": 50
+        },
+        {
+          "key": "outfit.11",
+          "prompt": "swimsuit",
+          "weight": 50
+        },
+        {
+          "key": "outfit.12",
+          "prompt": "trench coat",
+          "weight": 50
+        },
+        {
+          "key": "outfit.13",
+          "prompt": "hoodie and sweatpants",
+          "weight": 50
+        },
+        {
+          "key": "outfit.14",
+          "prompt": "kimono",
+          "weight": 50
+        },
+        {
+          "key": "outfit.15",
+          "prompt": "bohemian dress",
+          "weight": 50
+        },
+        {
+          "key": "outfit.16",
+          "prompt": "puffer jacket",
+          "weight": 50
+        },
+        {
+          "key": "outfit.17",
+          "prompt": "denim jacket",
+          "weight": 50
+        },
+        {
+          "key": "outfit.18",
+          "prompt": "tuxedo",
+          "weight": 50
+        },
+        {
+          "key": "outfit.19",
+          "prompt": "sweater vest",
+          "weight": 50
+        },
+        {
+          "key": "outfit.20",
+          "prompt": "plaid flannel",
+          "weight": 50
+        },
+        {
+          "key": "outfit.21",
+          "prompt": "silk robe",
+          "weight": 50
+        },
+        {
+          "key": "outfit.22",
+          "prompt": "futuristic armor",
+          "weight": 50
+        },
+        {
+          "key": "outfit.23",
+          "prompt": "steampunk attire",
+          "weight": 50
+        },
+        {
+          "key": "outfit.24",
+          "prompt": "goth fashion",
+          "weight": 50
+        },
+        {
+          "key": "outfit.25",
+          "prompt": "chef uniform",
+          "weight": 50
+        },
+        {
+          "key": "outfit.26",
+          "prompt": "astronaut suit",
+          "weight": 50
+        },
+        {
+          "key": "outfit.27",
+          "prompt": "safari outfit",
+          "weight": 50
+        },
+        {
+          "key": "outfit.28",
+          "prompt": "workout gear",
+          "weight": 50
+        },
+        {
+          "key": "outfit.29",
+          "prompt": "summer romper",
+          "weight": 50
+        },
+        {
+          "key": "outfit.30",
+          "prompt": "raincoat",
+          "weight": 50
+        }
+      ]
+    },
+    "pose.direction": {
+      "type": "single",
+      "options": [
+        {
+          "key": "dir.0",
+          "prompt": "looking at camera",
+          "weight": 50
+        },
+        {
+          "key": "dir.1",
+          "prompt": "looking away",
+          "weight": 50
+        },
+        {
+          "key": "dir.2",
+          "prompt": "looking down",
+          "weight": 50
+        },
+        {
+          "key": "dir.3",
+          "prompt": "looking up",
+          "weight": 50
+        },
+        {
+          "key": "dir.4",
+          "prompt": "profile view",
+          "weight": 50
+        },
+        {
+          "key": "dir.5",
+          "prompt": "over the shoulder",
+          "weight": 50
+        }
+      ]
+    },
+    "pose.expression": {
+      "type": "single",
+      "options": [
+        {
+          "key": "exp.0",
+          "prompt": "neutral face",
+          "weight": 50
+        },
+        {
+          "key": "exp.1",
+          "prompt": "genuine smile",
+          "weight": 50
+        },
+        {
+          "key": "exp.2",
+          "prompt": "serious",
+          "weight": 50
+        },
+        {
+          "key": "exp.3",
+          "prompt": "confident",
+          "weight": 50
+        },
+        {
+          "key": "exp.4",
+          "prompt": "laughing",
+          "weight": 50
+        },
+        {
+          "key": "exp.5",
+          "prompt": "relaxed",
+          "weight": 50
+        }
+      ]
+    },
+    "pose.body": {
+      "type": "single",
+      "options": [
+        {
+          "key": "body.0",
+          "prompt": "standing",
+          "weight": 50
+        },
+        {
+          "key": "body.1",
+          "prompt": "walking",
+          "weight": 50
+        },
+        {
+          "key": "body.2",
+          "prompt": "sitting relaxed",
+          "weight": 50
+        },
+        {
+          "key": "body.3",
+          "prompt": "hands in pockets",
+          "weight": 50
+        },
+        {
+          "key": "body.4",
+          "prompt": "arms crossed",
+          "weight": 50
+        },
+        {
+          "key": "body.5",
+          "prompt": "leaning on wall",
+          "weight": 50
+        },
+        {
+          "key": "body.6",
+          "prompt": "running",
+          "weight": 50
+        },
+        {
+          "key": "body.7",
+          "prompt": "jumping",
+          "weight": 50
+        },
+        {
+          "key": "body.8",
+          "prompt": "dynamic pose",
+          "weight": 50
+        }
+      ]
+    },
+    "scene.location": {
+      "type": "single",
+      "options": [
+        {
+          "key": "loc.0",
+          "prompt": "dark studio",
+          "weight": 50
+        },
+        {
+          "key": "loc.1",
+          "prompt": "street night",
+          "weight": 50
+        },
+        {
+          "key": "loc.2",
+          "prompt": "misty forest",
+          "weight": 50
+        },
+        {
+          "key": "loc.3",
+          "prompt": "sunny beach",
+          "weight": 50
+        },
+        {
+          "key": "loc.4",
+          "prompt": "coffee shop",
+          "weight": 50
+        },
+        {
+          "key": "loc.5",
+          "prompt": "abandoned factory",
+          "weight": 50
+        },
+        {
+          "key": "loc.6",
+          "prompt": "neon lit alley",
+          "weight": 50
+        },
+        {
+          "key": "loc.7",
+          "prompt": "library",
+          "weight": 50
+        },
+        {
+          "key": "loc.8",
+          "prompt": "mountain peak",
+          "weight": 50
+        },
+        {
+          "key": "loc.9",
+          "prompt": "underwater",
+          "weight": 50
+        },
+        {
+          "key": "loc.10",
+          "prompt": "space station",
+          "weight": 50
+        },
+        {
+          "key": "loc.11",
+          "prompt": "desert dunes",
+          "weight": 50
+        },
+        {
+          "key": "loc.12",
+          "prompt": "snowy cabin",
+          "weight": 50
+        },
+        {
+          "key": "loc.13",
+          "prompt": "cyberpunk city",
+          "weight": 50
+        },
+        {
+          "key": "loc.14",
+          "prompt": "medieval castle",
+          "weight": 50
+        },
+        {
+          "key": "loc.15",
+          "prompt": "modern minimalist apartment",
+          "weight": 50
+        },
+        {
+          "key": "loc.16",
+          "prompt": "botanical garden",
+          "weight": 50
+        },
+        {
+          "key": "loc.17",
+          "prompt": "subway station",
+          "weight": 50
+        },
+        {
+          "key": "loc.18",
+          "prompt": "rooftop at dusk",
+          "weight": 50
+        },
+        {
+          "key": "loc.19",
+          "prompt": "art gallery",
+          "weight": 50
+        },
+        {
+          "key": "loc.20",
+          "prompt": "busy intersection",
+          "weight": 50
+        },
+        {
+          "key": "loc.21",
+          "prompt": "empty highway",
+          "weight": 50
+        },
+        {
+          "key": "loc.22",
+          "prompt": "lighthouse",
+          "weight": 50
+        },
+        {
+          "key": "loc.23",
+          "prompt": "amusement park",
+          "weight": 50
+        },
+        {
+          "key": "loc.24",
+          "prompt": "concert stage",
+          "weight": 50
+        },
+        {
+          "key": "loc.25",
+          "prompt": "luxury hotel lobby",
+          "weight": 50
+        },
+        {
+          "key": "loc.26",
+          "prompt": "vineyard",
+          "weight": 50
+        },
+        {
+          "key": "loc.27",
+          "prompt": "ruins",
+          "weight": 50
+        },
+        {
+          "key": "loc.28",
+          "prompt": "ice cave",
+          "weight": 50
+        },
+        {
+          "key": "loc.29",
+          "prompt": "volcano crater",
+          "weight": 50
+        },
+        {
+          "key": "loc.30",
+          "prompt": "rainy bridge",
+          "weight": 50
+        }
+      ]
+    },
+    "camera.lens": {
+      "type": "single",
+      "options": [
+        {
+          "key": "lens.16mm",
+          "prompt": "shot on 16mm lens, ultra wide angle",
+          "weight": 30
+        },
+        {
+          "key": "lens.24mm",
+          "prompt": "shot on 24mm lens, wide angle",
+          "weight": 30
+        },
+        {
+          "key": "lens.35mm",
+          "prompt": "shot on 35mm lens",
+          "weight": 30
+        },
+        {
+          "key": "lens.50mm",
+          "prompt": "shot on 50mm lens",
+          "weight": 30
+        },
+        {
+          "key": "lens.85mm",
+          "prompt": "shot on 85mm lens, portrait",
+          "weight": 30
+        },
+        {
+          "key": "lens.135mm",
+          "prompt": "shot on 135mm lens, compression",
+          "weight": 30
+        },
+        {
+          "key": "lens.200mm",
+          "prompt": "shot on 200mm lens, telephoto",
+          "weight": 30
+        }
+      ]
+    },
+    "camera.dof": {
+      "type": "single",
+      "options": [
+        {
+          "key": "dof.shallow",
+          "prompt": "shallow depth of field, creamy bokeh",
+          "weight": 70
+        },
+        {
+          "key": "dof.deep",
+          "prompt": "deep depth of field",
+          "weight": 30
+        }
+      ]
+    },
+    "atmosphere.mood": {
+      "type": "multi",
+      "max": 2,
+      "options": [
+        {
+          "key": "mood.0",
+          "prompt": "mysterious",
+          "weight": 50
+        },
+        {
+          "key": "mood.1",
+          "prompt": "romantic",
+          "weight": 50
+        },
+        {
+          "key": "mood.2",
+          "prompt": "cyberpunk",
+          "weight": 50
+        },
+        {
+          "key": "mood.3",
+          "prompt": "joyful",
+          "weight": 50
+        },
+        {
+          "key": "mood.4",
+          "prompt": "melancholic",
+          "weight": 50
+        },
+        {
+          "key": "mood.5",
+          "prompt": "nostalgic",
+          "weight": 50
+        },
+        {
+          "key": "mood.6",
+          "prompt": "epic",
+          "weight": 50
+        },
+        {
+          "key": "mood.7",
+          "prompt": "dreamy",
+          "weight": 50
+        },
+        {
+          "key": "mood.8",
+          "prompt": "ethereal",
+          "weight": 50
+        },
+        {
+          "key": "mood.9",
+          "prompt": "gritty",
+          "weight": 50
+        },
+        {
+          "key": "mood.10",
+          "prompt": "whimsical",
+          "weight": 50
+        },
+        {
+          "key": "mood.11",
+          "prompt": "tense",
+          "weight": 50
+        },
+        {
+          "key": "mood.12",
+          "prompt": "peaceful",
+          "weight": 50
+        },
+        {
+          "key": "mood.13",
+          "prompt": "chaotic",
+          "weight": 50
+        },
+        {
+          "key": "mood.14",
+          "prompt": "surreal",
+          "weight": 50
+        },
+        {
+          "key": "mood.15",
+          "prompt": "dark fantasy",
+          "weight": 50
+        },
+        {
+          "key": "mood.16",
+          "prompt": "sci-fi",
+          "weight": 50
+        },
+        {
+          "key": "mood.17",
+          "prompt": "retro",
+          "weight": 50
+        },
+        {
+          "key": "mood.18",
+          "prompt": "minimalist",
+          "weight": 50
+        },
+        {
+          "key": "mood.19",
+          "prompt": "cozy",
+          "weight": 50
+        },
+        {
+          "key": "mood.20",
+          "prompt": "vibrant",
+          "weight": 50
+        }
+      ]
+    },
+    "lighting.setup": {
+      "type": "multi",
+      "max": 2,
+      "options": [
+        {
+          "key": "light.0",
+          "prompt": "soft key at 45\u00b0",
+          "weight": 50
+        },
+        {
+          "key": "light.1",
+          "prompt": "subtle rim light",
+          "weight": 50
+        },
+        {
+          "key": "light.2",
+          "prompt": "split-tone neon",
+          "weight": 50
+        },
+        {
+          "key": "light.3",
+          "prompt": "golden hour",
+          "weight": 50
+        },
+        {
+          "key": "light.4",
+          "prompt": "harsh direct sunlight",
+          "weight": 50
+        },
+        {
+          "key": "light.5",
+          "prompt": "rembrandt lighting",
+          "weight": 50
+        },
+        {
+          "key": "light.6",
+          "prompt": "butterfly lighting",
+          "weight": 50
+        },
+        {
+          "key": "light.7",
+          "prompt": "low-key lighting",
+          "weight": 50
+        },
+        {
+          "key": "light.8",
+          "prompt": "high-key lighting",
+          "weight": 50
+        },
+        {
+          "key": "light.9",
+          "prompt": "silhouette",
+          "weight": 50
+        },
+        {
+          "key": "light.10",
+          "prompt": "firelight",
+          "weight": 50
+        },
+        {
+          "key": "light.11",
+          "prompt": "bioluminescent glow",
+          "weight": 50
+        },
+        {
+          "key": "light.12",
+          "prompt": "cinematic dramatic lighting",
+          "weight": 50
+        },
+        {
+          "key": "light.13",
+          "prompt": "diffused overcast light",
+          "weight": 50
+        },
+        {
+          "key": "light.14",
+          "prompt": "flash photography",
+          "weight": 50
+        },
+        {
+          "key": "light.15",
+          "prompt": "candlelight",
+          "weight": 50
+        },
+        {
+          "key": "light.16",
+          "prompt": "volumetric god rays",
+          "weight": 50
+        }
+      ]
+    },
+    "style.base": {
+      "type": "single",
+      "options": [
+        {
+          "key": "style.photoreal",
+          "prompt": "professional editorial photography, photorealistic",
+          "weight": 40
+        },
+        {
+          "key": "style.cinematic",
+          "prompt": "cinematic color grading",
+          "weight": 35
+        },
+        {
+          "key": "style.polaroid",
+          "prompt": "polaroid aesthetic, vintage film",
+          "weight": 35
+        },
+        {
+          "key": "style.black_and_white",
+          "prompt": "high contrast black and white photography",
+          "weight": 35
+        }
+      ]
+    },
+    "quality.detail": {
+      "type": "multi",
+      "max": 3,
+      "options": [
+        {
+          "key": "q.hdr",
+          "prompt": "high dynamic range",
+          "weight": 30
+        },
+        {
+          "key": "q.skin",
+          "prompt": "ultra-detailed skin texture",
+          "weight": 35
+        },
+        {
+          "key": "q.8k",
+          "prompt": "8k ultra sharp",
+          "weight": 25
+        },
+        {
+          "key": "q.mac",
+          "prompt": "macro photography details",
+          "weight": 25
+        }
+      ]
+    },
+    "output.aspect_ratio": {
+      "type": "single",
+      "options": [
+        {
+          "key": "output.aspect.4_5",
+          "prompt": "vertical 4:5 aspect ratio",
+          "weight": 50
+        },
+        {
+          "key": "output.aspect.1_1",
+          "prompt": "1:1 aspect ratio",
+          "weight": 50
+        },
+        {
+          "key": "output.aspect.3_4",
+          "prompt": "vertical 3:4 aspect ratio",
+          "weight": 50
+        },
+        {
+          "key": "output.aspect.2_3",
+          "prompt": "vertical 2:3 aspect ratio",
+          "weight": 50
+        },
+        {
+          "key": "output.aspect.9_16",
+          "prompt": "9:16 aspect ratio",
+          "weight": 50
+        },
+        {
+          "key": "output.aspect.16_9",
+          "prompt": "16:9 aspect ratio",
+          "weight": 50
+        }
+      ]
+    },
+    "output.use_reference": {
+      "type": "single",
+      "options": [
+        {
+          "key": "output.use_reference",
+          "prompt": "RESERVED_FOR_ENGINE",
+          "weight": 50
+        }
+      ]
+    }
+  }
+}

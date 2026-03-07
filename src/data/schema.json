@@ -1,0 +1,94 @@
+{
+  "version": "1.0.0",
+  "promptOrder": [
+    "style.base",
+    "subject.gender",
+    "appearance.hair",
+    "appearance.glasses",
+    "clothing.outfit",
+    "pose.direction",
+    "pose.expression",
+    "pose.body",
+    "scene.location",
+    "lighting.setup",
+    "camera.lens",
+    "camera.dof",
+    "atmosphere.mood",
+    "quality.detail",
+    "output.aspect_ratio",
+    "output.use_reference"
+  ],
+  "uiSections": [
+    {
+      "id": "subject",
+      "categories": [
+        "subject.gender"
+      ]
+    },
+    {
+      "id": "appearance",
+      "categories": [
+        "appearance.hair",
+        "appearance.glasses"
+      ]
+    },
+    {
+      "id": "clothing",
+      "categories": [
+        "clothing.outfit"
+      ]
+    },
+    {
+      "id": "pose",
+      "categories": [
+        "pose.direction",
+        "pose.expression",
+        "pose.body"
+      ]
+    },
+    {
+      "id": "scene",
+      "categories": [
+        "scene.location"
+      ]
+    },
+    {
+      "id": "lighting",
+      "categories": [
+        "lighting.setup"
+      ]
+    },
+    {
+      "id": "camera",
+      "categories": [
+        "camera.lens",
+        "camera.dof"
+      ]
+    },
+    {
+      "id": "atmosphere",
+      "categories": [
+        "atmosphere.mood"
+      ]
+    },
+    {
+      "id": "style",
+      "categories": [
+        "style.base"
+      ]
+    },
+    {
+      "id": "quality",
+      "categories": [
+        "quality.detail"
+      ]
+    },
+    {
+      "id": "output",
+      "categories": [
+        "output.aspect_ratio",
+        "output.use_reference"
+      ]
+    }
+  ]
+}

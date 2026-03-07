@@ -1,0 +1,93 @@
+{
+    "id": "pack.cinematic_portrait",
+    "name": {
+        "en": "Cinematic Portrait",
+        "ru": "Кино-портрет",
+        "uk": "Кіно-портрет"
+    },
+    "description": {
+        "en": "Moody cinematic portraits with controlled lighting and shallow depth of field.",
+        "ru": "Мрачноватые киношные портреты с контролируемым светом и малой ГРИП.",
+        "uk": "Похмурі кінопортрети з контрольованим світлом і малою ГРЗ."
+    },
+    "cover": "/packs/cinematic_portrait.jpg",
+    "defaults": {
+        "style.base": [
+            "style.cinematic",
+            "style.photoreal"
+        ],
+        "quality.detail": [
+            "q.skin",
+            "q.hdr",
+            "q.8k"
+        ],
+        "camera.lens": [
+            "lens.85mm"
+        ],
+        "camera.dof": [
+            "dof.shallow"
+        ],
+        "pose.base": [
+            "pose.0"
+        ],
+        "atmosphere.mood": [
+            "mood.0"
+        ]
+    },
+    "pools": {
+        "lighting.setup": [
+            "light.0",
+            "light.1",
+            "light.2"
+        ],
+        "camera.lens": [
+            "lens.85mm",
+            "lens.135mm"
+        ],
+        "subject.gender": [
+            "gender.male",
+            "gender.female"
+        ],
+        "appearance.hair": [
+            "hair.0",
+            "hair.1"
+        ],
+        "appearance.glasses": [
+            "glasses.sun",
+            "glasses.clear"
+        ],
+        "clothing.outfit": [
+            "outfit.0",
+            "outfit.2"
+        ]
+    },
+    "generator": {
+        "picks": {
+            "lighting.setup": {
+                "min": 1,
+                "max": 2
+            },
+            "quality.detail": {
+                "min": 2,
+                "max": 3
+            },
+            "atmosphere.mood": {
+                "min": 1,
+                "max": 1
+            },
+            "appearance.glasses": {
+                "min": 0,
+                "max": 1
+            },
+            "clothing.outfit": {
+                "min": 1,
+                "max": 1
+            }
+        },
+        "seedStrategy": "stable"
+    },
+    "rules": {
+        "forbidCombos": [],
+        "require": []
+    }
+}

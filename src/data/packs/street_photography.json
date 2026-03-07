@@ -1,0 +1,82 @@
+{
+    "id": "pack.street_photography",
+    "name": {
+        "en": "Street Photography",
+        "ru": "Стрит-фото",
+        "uk": "Стріт-фото"
+    },
+    "description": {
+        "en": "Candid urban moments, natural lighting, and deep depth of field.",
+        "ru": "Кандидные городские моменты, естественный свет и большая ГРИП.",
+        "uk": "Кандидні міські моменти, природне світло та велика ГРЗ."
+    },
+    "cover": "/packs/street_photography.jpg",
+    "defaults": {
+        "style.base": [
+            "style.photoreal"
+        ],
+        "quality.detail": [
+            "q.hdr",
+            "q.8k"
+        ],
+        "camera.lens": [
+            "lens.35mm"
+        ],
+        "camera.dof": [
+            "dof.deep"
+        ],
+        "pose.base": [
+            "pose.1"
+        ],
+        "scene.location": [
+            "loc.1"
+        ]
+    },
+    "pools": {
+        "lighting.setup": [
+            "light.3",
+            "light.2"
+        ],
+        "camera.lens": [
+            "lens.35mm",
+            "lens.50mm"
+        ],
+        "subject.gender": [
+            "gender.male",
+            "gender.female"
+        ],
+        "clothing.outfit": [
+            "outfit.1",
+            "outfit.2"
+        ],
+        "scene.location": [
+            "loc.1",
+            "loc.6"
+        ],
+        "atmosphere.mood": [
+            "mood.2",
+            "mood.0"
+        ]
+    },
+    "generator": {
+        "picks": {
+            "lighting.setup": {
+                "min": 1,
+                "max": 2
+            },
+            "quality.detail": {
+                "min": 1,
+                "max": 2
+            },
+            "atmosphere.mood": {
+                "min": 1,
+                "max": 1
+            }
+        },
+        "seedStrategy": "stable"
+    },
+    "rules": {
+        "forbidCombos": [],
+        "require": []
+    }
+}
