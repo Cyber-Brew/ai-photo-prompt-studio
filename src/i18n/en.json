@@ -12,6 +12,7 @@
   "ui.variations": "10 Variations",
   "ui.save": "Save to Library",
   "ui.copied": "Copied!",
+  "ui.copy_failed": "Copy failed",
   "ui.placeholder": "Your prompt will appear here...",
   "ui.custom.placeholder": "Or type a custom %s...",
   "ui.use_reference_button": "Use my photos",

@@ -12,13 +12,52 @@ export default function OutputPanel() {
     const promptStyle = useBuilderStore(s => s.promptStyle);
     const setPromptStyle = useBuilderStore(s => s.setPromptStyle);
 
-    const [copied, setCopied] = useState(false);
+    const [copyStatus, setCopyStatus] = useState<'idle' | 'success' | 'fail'>('idle');
     const [showVariations, setShowVariations] = useState(false);
 
-    const handleCopy = () => {
-        navigator.clipboard.writeText(prompt);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+    const showStatus = (status: 'success' | 'fail') => {
+        setCopyStatus(status);
+        setTimeout(() => setCopyStatus('idle'), 2000);
+    };
+
+    const handleCopy = async () => {
+        // 1. Try modern clipboard API
+        try {
+            if (navigator?.clipboard?.writeText) {
+                await navigator.clipboard.writeText(prompt);
+                showStatus('success');
+                return;
+            }
+        } catch (err) {
+            console.error('Clipboard API failed', err);
+        }
+
+        // 2. Fallback for mobile/older browsers
+        try {
+            const textArea = document.createElement('textarea');
+            textArea.value = prompt;
+
+            // Prevent scrolling to bottom
+            textArea.style.top = '0';
+            textArea.style.left = '0';
+            textArea.style.position = 'fixed';
+
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            const successful = document.execCommand('copy');
+            document.body.removeChild(textArea);
+
+            if (successful) {
+                showStatus('success');
+            } else {
+                showStatus('fail');
+            }
+        } catch (fallbackErr) {
+            console.error('Fallback copy failed', fallbackErr);
+            showStatus('fail');
+        }
     };
 
     // Auto-generate a scene on first load if empty
@@ -57,11 +96,12 @@ export default function OutputPanel() {
 
                     <button
                         onClick={handleCopy}
-                        className="absolute top-4 right-4 bg-white border shadow-sm p-2 rounded-lg text-gray-600 hover:text-black hover:border-gray-300 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+                        className="absolute top-4 right-4 bg-white border shadow-sm p-2 rounded-lg text-gray-600 hover:text-black hover:border-gray-300 transition-all focus:ring-2 focus:ring-black"
                         title="Copy to clipboard"
                     >
                         <Copy size={16} />
-                        {copied && <span className="absolute -top-8 right-0 bg-black text-white text-xs px-2 py-1 rounded">{t('ui.copied')}</span>}
+                        {copyStatus === 'success' && <span className="absolute -top-8 right-0 bg-black text-white text-xs px-2 py-1 rounded">{t('ui.copied')}</span>}
+                        {copyStatus === 'fail' && <span className="absolute -top-8 right-0 bg-red-500 text-white text-xs px-2 py-1 rounded whitespace-nowrap">{t('ui.copy_failed')}</span>}
                     </button>
                 </div>
 
@@ -74,14 +114,10 @@ export default function OutputPanel() {
                         {t('ui.generate.scene')}
                     </button>
 
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 gap-3">
                         <button onClick={() => setShowVariations(true)} className="py-2.5 px-4 bg-white border rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors">
                             <RefreshCcw size={16} />
                             {t('ui.variations')}
-                        </button>
-                        <button className="py-2.5 px-4 bg-white border rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors">
-                            <Save size={16} />
-                            {t('ui.save')}
                         </button>
                     </div>
                 </div>

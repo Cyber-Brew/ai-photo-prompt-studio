@@ -12,6 +12,7 @@
   "ui.variations": "10 Варіацій",
   "ui.save": "До бібліотеки",
   "ui.copied": "Скопійовано!",
+  "ui.copy_failed": "Помилка копіювання",
   "ui.placeholder": "Ваш промпт з'явиться тут...",
   "ui.custom.placeholder": "Або введіть свій %s...",
   "ui.use_reference_button": "Використовувати мої фото",

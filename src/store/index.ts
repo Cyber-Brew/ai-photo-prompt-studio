@@ -22,7 +22,9 @@ interface BuilderStore extends BuilderStateData {
 }
 
 export const useBuilderStore = create<BuilderStore>((set, get) => ({
-    selections: {},
+    selections: {
+        'output.use_reference': ['output.use_reference']
+    },
     customText: {},
     activePackId: null,
     targetEngine: 'generic',
@@ -73,7 +75,17 @@ export const useBuilderStore = create<BuilderStore>((set, get) => ({
         if (!pack) return state;
 
         const seededSelections = SceneGenerator.generateScene(pack);
-        return { selections: seededSelections };
+
+        // Preserve essential settings that shouldn't be overwritten blindly by rng
+        const finalSelections = { ...seededSelections };
+        if (state.selections['output.use_reference']) {
+            finalSelections['output.use_reference'] = state.selections['output.use_reference'];
+        }
+        if (state.selections['output.aspect_ratio']) {
+            finalSelections['output.aspect_ratio'] = state.selections['output.aspect_ratio'];
+        }
+
+        return { selections: finalSelections };
     }),
 
     setTargetEngine: (engine) => set({ targetEngine: engine }),
